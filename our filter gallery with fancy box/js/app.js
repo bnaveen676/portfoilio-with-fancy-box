@@ -72,7 +72,7 @@ class FilterGallery {
     reuseComp(data, ele) {
         // get elements
         let imageObjects = data.map((imageObj) => {
-            return `<div class="imageContainer">
+            return `<div class="imageContainerLight">
                        <a data-fancybox="gallery" data-caption="${imageObj.category}" href="${imageObj.url}"><img src="${imageObj.url}" alt="image" data-match="${imageObj.category}"></a>
                     </div>`;
         });
@@ -94,7 +94,7 @@ $(() => {
         filterImageCon: '.filterImages',
     });
     // 
-    gallery.galleryMethod('.imageContainer', {
+    gallery.galleryMethod('.imageContainerLight', {
         filterImageCon: '.filterImages',
         buttons: '.filterButtons > button',
         eventName: 'click',
